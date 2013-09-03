@@ -1,0 +1,25 @@
+#######################################
+# Syntax Coloring Map For Vector
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+Signal	KEYWORD1
+Slot	KEYWORD1
+FunctionSlot KEYWORD1
+MethodSlot KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+Emit	KEYWORD2
+Connect	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
+
