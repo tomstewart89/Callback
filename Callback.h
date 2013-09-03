@@ -1,5 +1,5 @@
-#ifndef ADVANCEDCALLBACK_H
-#define ADVANCEDCALLBACK_H
+#ifndef CALLBACK_H
+#define CALLBACK_H
 
 // The Slot base class, its template parameter indicates the datatype of the parameters it expects to receive. Slots can only
 // be connected to Signals with identical ParameterTypes.
@@ -101,4 +101,4 @@ public:
 };
 
 
-#endif // ADVANCEDCALLBACK_H
+#endif // CALLBACK_H
