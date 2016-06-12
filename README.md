@@ -1,22 +1,29 @@
-Callback: A simple Signals and Slots implementation for Arduino:
+# Callback
+
+A simple Signals and Slots implementation for Arduino:
 
 Signals and slots is a handy pattern for situations where one or more objects need to be informed of changes occuring elsewhere in the program much like a callback. Unlike callbacks, with this library it's possible to have multiple functions called on the occurence of an event. Additionally, those functions can be methods of an object as well as standard functions.
 
 To make use of this, define a Signal for an event that might need monitoring like:
 
-	Signal<float> highTempMeasured;
+'''
+Signal<float> highTempMeasured;
+'''
 
 Signal is a template class that expects the type of signals it'll later pass to its Slots. In this case it's a temperature so a float is appropriate. It has a second optional template parameter which is the number of slots it can support, the default is 8.
 
 Now connect to the signal with Slots, recepticles and handlers for the events emitted by the signal. Slots can be made from free standing functions like so:
 
+'''
 void RaiseHighTempAlert(float temperature)
 {
 	Serial.println("High temp measured!");
 }
+'''
 
 Or methods of objects like so:
 
+'''
 class AlertsManager
 {
 	float highestTempRecorded;
@@ -27,7 +34,7 @@ public:
 			highestTempRecorded = temperature;
 	}
 } alerter;
-
+'''
 For free standing functions we define a slot like so:
 
 FunctionSlot<float> funcSlot(RaiseHighTempAlert);
