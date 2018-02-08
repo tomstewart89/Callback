@@ -1,4 +1,5 @@
-Callback: A simple Signals and Slots implementation for Arduino:
+# Callback: 
+### A simple Signals and Slots implementation for Arduino
 
 Signals and slots is a handy pattern for situations where one or more objects need to be informed of changes occuring elsewhere in the program much like a callback. Unlike callbacks, with this library it's possible to have multiple functions called on the occurence of an event. Additionally, those functions can be methods of an object as well as standard functions.
 
