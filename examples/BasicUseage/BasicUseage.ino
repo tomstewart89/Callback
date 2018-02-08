@@ -31,14 +31,14 @@ void setup()
   MethodSlot<Foo,char> memFunSlot(&foo, &Foo::OnCharReceivedCheckForWatch);
   FunctionSlot<char> ptrSlot(OnCharReceivedPrint);
 
-  // Connect them up
-  characterReceived.Connect(memFunSlot);
-  characterReceived.Connect(ptrSlot);
+  // Attach them up
+  characterReceived.attach(memFunSlot);
+  characterReceived.attach(ptrSlot);
 }
 
 void loop()
 {
-  // Emit a characterReceived signal every time a character arrives on the serial port.
+  // Fire the characterReceived signal every time a character arrives on the serial port.
   while(Serial.available())
-    characterReceived.Emit(Serial.read());
+    characterReceived.fire(Serial.read());
 }
