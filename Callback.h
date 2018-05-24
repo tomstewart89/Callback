@@ -35,7 +35,7 @@ public:
 // an interrupt so the receipient will want to be fairly quick about how they process it.
 template <class ParameterType, int Slots = 8> class Signal {
     Slot<ParameterType>* _connections[Slots];
-	int _nextSlot;
+	int _nextSlot = 0;
 
 public:
     Signal() { }
