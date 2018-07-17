@@ -8,8 +8,8 @@
 
 Signal	KEYWORD1
 Slot	KEYWORD1
-FunctionSlot KEYWORD1
-MethodSlot KEYWORD1
+FunctionSlot	KEYWORD1
+MethodSlot	KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)
