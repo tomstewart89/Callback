@@ -48,7 +48,7 @@ public:
 
     // Adds slot to list of connections.
     void attach(const Slot<ParameterType>& slot) {
-        if (_nextSlot < (Slots - 1)) {
+        if (_nextSlot < Slots) {
             // Connect it up and away we go
             _connections[_nextSlot++] = slot.clone();
         }
