@@ -63,7 +63,7 @@ public:
 
                 for (int j = i; j < _nextSlot; ++j)
                     _connections[j] = _connections[j + 1];
-                _connections[_nextSlot] = NULL;
+                _connections[_nextSlot] = nullptr;
             }
         }
     }
